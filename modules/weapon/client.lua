@@ -9,6 +9,7 @@ local anims = {}
 anims[`GROUP_MELEE`] = { 'melee@holster', 'unholster', 200, 'melee@holster', 'holster', 600 }
 anims[`GROUP_PISTOL`] = { 'reaction@intimidation@cop@unarmed', 'intro', 400, 'reaction@intimidation@cop@unarmed', 'outro', 450 }
 anims[`GROUP_STUNGUN`] = anims[`GROUP_PISTOL`]
+anims[`GROUP_THROWN`] = anims[`GROUP_MELEE`]
 
 local function vehicleIsCycle(vehicle)
 	local class = GetVehicleClass(vehicle)
@@ -31,9 +32,16 @@ function Weapon.Equip(item, data, noWeaponAnim)
 			anim = nil
 		end
 
-		sleep = anim and anim[3] or 1200
+		animTime = 2.0
 
-		Utils.PlayAnimAdvanced(sleep, anim and anim[1] or 'reaction@intimidation@1h', anim and anim[2] or 'intro', coords.x, coords.y, coords.z, 0, 0, GetEntityHeading(playerPed), 8.0, 3.0, sleep*2, 50, 0.1)
+		if PlayerData['groups'] == 'police' then
+			animTime = 1.3
+		end
+
+		sleep = anim and anim[3] or 1200
+		sleep *= animTime
+
+		Utils.PlayAnimAdvanced(sleep, anim and anim[1] or 'reaction@intimidation@1h', anim and anim[2] or 'intro', coords.x, coords.y, coords.z, 0, 0, GetEntityHeading(playerPed), 8.0, 1.0, sleep, 50, 0.1)
 	end
 
 	::skipAnim::
@@ -132,6 +140,13 @@ function Weapon.Disarm(currentWeapon, noAnim)
 
 	Utils.WeaponWheel()
 	RemoveAllPedWeapons(cache.ped, true)
+
+	if client.parachute then
+		local chute = `GADGET_PARACHUTE`
+		GiveWeaponToPed(cache.ped, chute, 0, true, false)
+		SetPedGadget(cache.ped, chute, true)
+		SetPlayerParachuteTintIndex(PlayerData.id, client.parachute?[2] or -1)
+	end
 end
 
 function Weapon.ClearAll(currentWeapon)

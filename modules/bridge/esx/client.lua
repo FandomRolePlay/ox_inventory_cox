@@ -3,6 +3,7 @@ local ESX = setmetatable({}, {
 		local obj = exports.es_extended:getSharedObject()
 		self.SetPlayerData = obj.SetPlayerData
 		self.PlayerLoaded = obj.PlayerLoaded
+	 	self.GetPlayerData = obj.GetPlayerData
 		return self[index]
 	end
 })
@@ -26,8 +27,38 @@ AddEventHandler('esx:setPlayerData', function(key, value)
 	if not PlayerData.loaded or GetInvokingResource() ~= 'es_extended' then return end
 
 	if key == 'job' then
-		key = 'groups'
-		value = { [value.name] = value.grade }
+ 		local ESXPlayerData = ESX.GetPlayerData()
+		local org = ESXPlayerData.metadata?.organisation
+
+		if org and org.name
+			and org.name ~= nil and org.name ~= ''
+			and org.grade ~= nil and org.grade ~= '' 
+		then
+			key = 'groups'
+			value = {
+				[value.name] = value.grade,
+				[org.name] = org.grade
+			}
+		else
+			key = 'groups'
+			value = { [value.name] = value.grade }
+ 		end
+	end
+
+	if key == 'metadata' then
+		local ESXPlayerData = ESX.GetPlayerData()
+		local org = value.organisation
+
+		if org and org.name
+			and org.name ~= nil and org.name ~= ''
+			and org.grade ~= nil and org.grade ~= '' 
+		then
+			key = 'groups'
+			value = {
+				[ESXPlayerData.job.name] = ESXPlayerData.job.grade,
+				[org.name] = org.grade
+			}
+		end
 	end
 
 	PlayerData[key] = value
@@ -38,7 +69,7 @@ local Weapon = require 'modules.weapon.client'
 
 RegisterNetEvent('esx_policejob:handcuff', function()
 	PlayerData.cuffed = not PlayerData.cuffed
-	LocalPlayer.state:set('invBusy', PlayerData.cuffed, false)
+	LocalPlayer.state:set('invBusy', PlayerData.cuffed, true)
 
 	if not PlayerData.cuffed then return end
 
@@ -47,5 +78,5 @@ end)
 
 RegisterNetEvent('esx_policejob:unrestrain', function()
 	PlayerData.cuffed = false
-	LocalPlayer.state:set('invBusy', PlayerData.cuffed, false)
+	LocalPlayer.state:set('invBusy', PlayerData.cuffed, true)
 end)

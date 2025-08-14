@@ -13,11 +13,14 @@ end)
 local ESX
 
 SetTimeout(500, function()
-	ESX = exports.es_extended:getSharedObject()
+    lib.checkDependency('es_extended', '1.6.0', true)
 
-	if ESX.CreatePickup then
-		error('ox_inventory requires a ESX Legacy v1.6.0 or above, refer to the documentation.')
-	end
+	ESX = exports.es_extended:getSharedObject()
+    local customInventory = ESX.GetConfig().CustomInventory
+
+	if customInventory ~= nil and customInventory ~= "ox" then
+        error('es_extended has not been configured to enable support for ox_inventory!\nEnsure Config.CustomInventory has been set to "ox" in your es_extended resource config.')
+    end
 
 	server.UseItem = ESX.UseItem
 	server.GetPlayerFromId = ESX.GetPlayerFromId
@@ -31,9 +34,13 @@ server.accounts.black_money = 0
 
 ---@diagnostic disable-next-line: duplicate-set-field
 function server.setPlayerData(player)
+	local org = player.metadata.organisation
 	local groups = {
-		[player.job.name] = player.job.grade
+		[player.job.name] = player.job.grade,
 	}
+	if org and org.name and org.grade then
+		groups[org.name] = org.grade
+	end
 
 	return {
 		source = player.source,
@@ -63,7 +70,7 @@ end
 function server.buyLicense(inv, license)
 	if server.hasLicense(inv, license.name) then
 		return false, 'already_have'
-	elseif Inventory.GetItem(inv, 'money', false, true) < license.price then
+	elseif Inventory.GetItemCount(inv, 'money') < license.price then
 		return false, 'can_not_afford'
 	end
 
@@ -118,6 +125,13 @@ function server.isPlayerBoss(playerId)
 	local xPlayer = ESX.GetPlayerFromId(playerId)
 
 	return xPlayer.job.grade_name == 'boss'
+end
+
+---@diagnostic disable-next-line: duplicate-set-field
+function server.removeFromBankAccount(playerId, amount)
+	local xPlayer = ESX.GetPlayerFromId(playerId)
+
+	xPlayer.removeAccountMoney('bank', amount)
 end
 
 MySQL.ready(function()
