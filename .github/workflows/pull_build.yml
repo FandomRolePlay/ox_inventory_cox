@@ -10,14 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: install ssh keys
-      # check this thread to understand why its needed:
-      # https://stackoverflow.com/a/70447517
+    - name: Deploy to main server
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        command_timeout: 1m
+        sync: true
+        script: ${{ secrets.PULL_SCRIPT }}
+    - name: notify on failure
+      if: failure()
       run: |
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
-    - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && cd web && pnpm i && pnpm build && exit"
+        RESPONSE=$(curl -H "Content-Type: application/json" -X POST -d '{
+        "username": "GitHub",
+        "content": "@everyone Push na główny serwer nie powiódł się!",
+        "embeds": null,
+        "attachments": []
+        }' ${{ secrets.WEBHOOK_URL }})
+        echo "Webhook server response: $RESPONSE"
     - name: cleanup
       run: rm -rf ~/.ssh
