@@ -51,6 +51,8 @@ local function setContainerProperties(itemName, properties)
 	}
 end
 
+exports('setContainerProperties', setContainerProperties)
+
 setContainerProperties('ammocrate', {
 	slots = 50,
 	maxWeight = 35000,
