@@ -72,8 +72,8 @@ return {
 			[`bcsowesternwinter`] = {10, 20000},
 			[`bcsomtlpacker`] = {40, 60000},
 			[`sr650fly`] = {20, 60000},
-			[`streamer216x`] = {40, 200000},
-			[`patrolboat`] = {40, 200000},
+			[`streamer216x`] = {40, 500000},
+			[`patrolboat`] = {40, 300000},
 		}
 	},
 
