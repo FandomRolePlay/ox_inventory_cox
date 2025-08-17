@@ -1188,6 +1188,191 @@ return {
 		},
 		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
+	--------- Town update
+	['town_pirozki'] = {
+		label = 'Pirożki',
+		description = 'Małe bułeczki z różnymi nadzieniami',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 400000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_pielmieni'] = {
+		label = 'Pielmieni',
+		description = 'Małe pierożki z mięsem, podawane z masłem lub śmietaną',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 400000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_medovik'] = {
+		label = 'Medovik',
+		description = 'Tort miodowy z cienkich placków przekładanych kremem śmietanowym',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 400000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_pavlova'] = {
+		label = 'Beza Pavlova',
+		description = 'Klasyczny deser bezowy',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_szaszlyki'] = {
+		label = 'Szaszłyki',
+		description = 'Grillowane szpady mięsne, często marynowane w cebuli, occie i przyprawach',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_ruskie'] = {
+		label = 'Pierogi Ruskie',
+		description = 'Pierogi z ziemniakami i twarogiem podawane z podsmażoną cebulką i skwarkami',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_dorsz'] = {
+		label = 'Dorsz w panierce',
+		description = 'Rybka w panierce podawana z frytkami',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 800000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_czeburek'] = {
+		label = 'Czebureki',
+		description = 'Duże, chrupiące pierogi smażone w głębokim oleju, z mięsem mielonym, cebulą i przyprawami',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_kurica'] = {
+		label = 'Kurica Tabaka',
+		description = 'Kurczak przyprawiony czosnkiem i ziołami, spłaszczony i smażony pod ciężarem na patelni do chrupiącej złotej skórki',
+		weight = 455,
+		decay = true,
+		client = {
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			hunger = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	["town_medovucha"] = {
+		label = "Medovukha ",
+		description = 'Tradycyjny napój miodowy o niskiej zawartości alkoholu, lekko słodki i aromatyczny.',
+		weight = 200,
+		stack = true,
+		decay = true,
+		close = true,
+		client = {
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			thirst = 400000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute	
+	},
+	["town_kompot"] = {
+		label = "Kompot owocowy",
+		description = 'Kompocik, jak u babushki. Widać pływające w nim owoce.',
+		weight = 300,
+		stack = true,
+		close = true,
+		decay = true,
+		client = {
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `p_w_grass_gls_s`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			thirst = 500000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
+	['town_mors'] = {
+		label = 'Mors malinowy',
+		description = 'Naturalny napój z malin, lekko kwaśny i orzeźwiający, idealny do cięższych dań. Serwowany na zimno z lodem.',
+		weight = 300,
+		decay = true,
+		client = {
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_cs_bs_cup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			thirst = 600000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
 
     --Hell's Gate Pub (Gastro)
     ['hellssteak'] = {
@@ -1376,8 +1561,8 @@ return {
 		degrade = 2 * 24 * 60, -- day * hour * minute
 	},
 	['foodtrucksandwich1'] = {
-		label = 'Spicy Sandwitch',
-		description = "Kanapka z szarpaną wołowiną i zapiekanym serem. Dobrze przyprawiona.",
+		label = 'Bagietka',
+		description = "Świeża bagietka w klasycznym wydaniu - szynka i ser",
 		weight = 400,
 		client = {
 			anim = 'eating',
@@ -1390,8 +1575,8 @@ return {
 		degrade = 2 * 24 * 60, -- day * hour * minute
 	},
 	['foodtrucksandwich2'] = {
-		label = 'Jalapeno Bobber',
-		description = "Kanapka z Jalapeno, piecze dwa razy.",
+		label = 'Kanapka farmerska',
+		description = "Kanapka z jajkiem i świeżymi warzywami",
 		weight = 400,
 		client = {
 			anim = 'eating',
@@ -7307,7 +7492,8 @@ return {
 		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
 	["croissant"] = {
-		label = "Croissant z czekoladą",
+		label = "Croissant śniadaniowy",
+		description = "Francuski wypiek z kurczakiem i warzywami",
 		weight = 200,
 		stack = true,
 		close = true,
@@ -7691,6 +7877,22 @@ return {
 		},
 		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
+	["ss_matcha"] = {
+		label = "Matcha",
+		weight = 150,
+		stack = true,
+		close = true,
+		decay = true,
+		client = {
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_tumbler_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			export = 'FandomRP.useStatusItem',
+			statusCap = 1000000,
+			thirst = 450000,
+		},
+		degrade = 1 * 24 * 60, -- day * hour * minute
+	},
 	------------- Bulletbites
 	["bb_cheese"] = {
 	label = "Kuleczki serowe",
@@ -7913,7 +8115,8 @@ return {
 	},
 
 	['bagel_tofu'] = {
-		label = 'Bajgiel tofu',
+		label = 'Bagel z łososiem',
+		description = "Bułka brioche z wędzonym łososiem i serkiem białym",
 		weight = 180,
 		client = {
 			anim = 'eating',
