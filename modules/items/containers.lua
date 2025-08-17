@@ -157,5 +157,10 @@ setContainerProperties('drugstash1', {
     maxWeight = 500,
     whitelist = {'purple_haze_bag', 'banana_kush_bag','blue_dream_bag','og_kush_bag','red_jack_bag','chem_sister_bag','heroin_bag','crack_bag','coke' }
 })
+setContainerProperties('kawalektort', {
+    slots = 10,
+    maxWeight = 1100,
+    whitelist = {'ss_cake','ss_red_velvet','cake,','blueberry_pie','kendalcake','town_medovik'}
+})
 
 return containers

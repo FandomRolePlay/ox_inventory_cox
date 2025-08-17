@@ -8072,20 +8072,10 @@ return {
 		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
 		['kawalektort'] = {
-		label = 'Kawałek tortu',
+		label = 'Tort',
+		description = "Pudełko na tort. Można tu włożyć różne słodkości",
 		weight = 100,
-		decay = true,
-		client = {
-			anim = 'eating',
-			prop = 'prop_taco_01',
-			usetime = 2500,
-			export = 'FandomRP.useStatusItem',
-			statusCap = 1000000,
-			hunger = 300000,
-		},
-		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
-
 	['beef_tartare'] = {
 		label = 'Tatar wołowy',
 		weight = 455,
