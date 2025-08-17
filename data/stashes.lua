@@ -205,6 +205,24 @@ return {
 		groups = {['lssd'] = 1}
 	},
 	{
+		coords = vec3(1842.290162, 3678.224122, 35.210938),
+		target = {
+			loc = vec3(1842.290162, 3678.224122, 35.210938),
+			length = 1.2,
+			width = 1.2,
+			heading = 340,
+			minZ = 25.05,
+			maxZ = 26.65,
+			label = 'Otwórz szafke'
+		},
+		name = 'lssdlockerss', --Sandy Shores
+		label = 'Szafka prywatna',
+		owner = true,
+		slots = 15,
+		weight = 20000,
+		groups = {['lssd'] = 1}
+	},
+	{
 		coords = vec3(369.19, -1586.66, 28.48),
 		target = {
 			loc = vec3(369.19, -1586.66, 28.48),
@@ -216,6 +234,23 @@ return {
 			label = 'Lada'
 		},
 		name = 'LSSDlada',
+		label = 'Lada',
+		owner = false,
+		slots = 15,
+		weight = 25000,
+	},
+	{
+		coords = vec3(1833.362670, 3678.870362, 35.396362),
+		target = {
+			loc = vec3(1833.362670, 3678.870362, 35.396362),
+			length = 1.0,
+			width = 1.0,
+			heading = 340,
+			minZ = 28.88,
+			maxZ = 30.48,
+			label = 'Lada'
+		},
+		name = 'LSSDladass', --Sandy Shores
 		label = 'Lada',
 		owner = false,
 		slots = 15,
@@ -239,7 +274,24 @@ return {
 		weight = 20000,
 		groups = {['lssd'] = 1}
 	},
-
+	{
+		coords = vec3(1835.789062, 3686.901124, 35.564820),
+		target = {
+			loc = vec3(1835.789062, 3686.901124, 35.564820),
+			length = 0.6,
+			width = 1.6,
+			heading = 340,
+			minZ = 24.95,
+			maxZ = 26.55,
+			label = 'Otwórz szafke S.E.R.T.'
+		},
+		name = 'lssdlockersertss', --Sandy Shores
+		label = 'Szafka prywatna S.E.R.T.',
+		owner = true,
+		slots = 15,
+		weight = 20000,
+		groups = {['lssd'] = 1}
+	},
 	{
 		coords = vec3(379.31, -1596.59, 24.56),
 		target = {
@@ -252,6 +304,24 @@ return {
 			label = 'Otwórz Magazyn z Bronią'
 		},
 		name = 'lssdzbrojownia',
+		label = 'Magazyn z Bronią',
+		owner = false,
+		slots = 200,
+		weight = 500000,
+		groups = {['lssd'] = 2}
+	},
+	{
+		coords = vec3(1840.338500, 3684.804444, 35.44690),
+		target = {
+			loc = vec3(1840.338500, 3684.804444, 35.44690),
+			length = 1.8,
+			width = 0.6,
+			heading = 340,
+			minZ = 24.96,
+			maxZ = 26.56,
+			label = 'Otwórz Magazyn z Bronią'
+		},
+		name = 'lssdzbrojowniass', --Sandy Shores
 		label = 'Magazyn z Bronią',
 		owner = false,
 		slots = 200,
@@ -295,6 +365,24 @@ return {
 		groups = {['lssd'] = 1}
 	},
 	{
+		coords = vec3(1838.255004, 3688.312012, 35.480590),
+		target = {
+			loc = vec3(1838.255004, 3688.312012, 35.480590),
+			length = 0.6,
+			width = 1.6,
+			heading = 70,
+			minZ = 24.90,
+			maxZ = 26.50,
+			label = 'Otwórz Magazyn'
+		},
+		name = 'lssdmagazynss', --Sandy Shores
+		label = 'Magazyn',
+		owner = false,
+		slots = 200,
+		weight = 500000,
+		groups = {['lssd'] = 1}
+	},
+	{
 		coords = vec3(371.96, -1585.23, 33.65),
 		target = {
 			loc = vec3(371.96, -1585.23, 33.65),
@@ -306,6 +394,24 @@ return {
 			label = 'Otwórz Magazyn'
 		},
 		name = 'lssdmagazyncm',
+		label = 'Magazyn Commandu',
+		owner = false,
+		slots = 50,
+		weight = 50000,
+		groups = {['lssd'] = 6}
+	},
+	{
+		coords = vec3(1824.553834, 3674.333984, 40.080566),
+		target = {
+			loc = vec3(1824.553834, 3674.333984, 40.080566),
+			length = 0.8,
+			width = 1.6,
+			heading = 340,
+			minZ = 33.05,
+			maxZ = 34.25,
+			label = 'Otwórz Magazyn'
+		},
+		name = 'lssdmagazyncmss', --Sandy Shores
 		label = 'Magazyn Commandu',
 		owner = false,
 		slots = 50,
