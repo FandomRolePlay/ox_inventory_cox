@@ -275,7 +275,8 @@ return {
 			{ loc = vec3(1165.95, 2710.20, 38.26),  length = 0.6, width = 0.6, heading = 178.84, minZ = 38.1,  maxZ = 38.5,  distance = 1.5 },
 			{ loc = vec3(1393.0, 3605.95, 35.11),   length = 0.6, width = 0.6, heading = 200.0,  minZ = 35.0,  maxZ = 35.4,  distance = 1.5 },
 			{ loc = vec3(-160.63, 6321.78, 31.59),  length = 0.6, width = 0.6, heading = 315.0,  minZ = 31.54, maxZ = 32.14, distance = 1.5 }, --PALETO
-			{ loc = vec3(-1207.67, -1508.45, 4.37), length = 0.4, width = 0.4, heading = 35.0,   minZ = 4.17,  maxZ = 4.57,  distance = 1.5 } --PLAŻA
+			{ loc = vec3(-1207.67, -1508.45, 4.37), length = 0.4, width = 0.4, heading = 35.0,   minZ = 4.17,  maxZ = 4.57,  distance = 1.5 }, --PLAŻA
+			{ loc = vec3(-858.73, -231.5, 61.02), length = 0.6, width = 2.6, heading = 30.0,     minZ = 60.02, maxZ = 62.22, distance = 1.5 } --PLAŻA
 		}
 	},
 	YouTool = {
@@ -1287,10 +1288,10 @@ return {
 			id = 760, colour = 4, scale = 1.0
 		},
 		groups = {
-			['mechanic'] = 6, ["mechanic2"] = 0, ["mechanic3"] = 0
+			['mechanic'] = 6, ["mechanic2"] = 6, ["mechanic3"] = 0
 		},
 		inventory = {
-			{ name = 'spareparts',     price = 8 },
+			{ name = 'spareparts',     price = 20 },
 			{ name = 'diagnostictool', price = 500 },
 			{ name = 'mechanictools',  price = 250 },
 			{ name = 'cleaningkit',    price = 5 },

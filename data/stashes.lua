@@ -1545,14 +1545,14 @@ return {
 
 	-- BENNYS
 	{
-		coords = vec3(-194.18, -1335.6, 31.3),
+		coords = vec3(-1642.88, -783.98, 10.18),
 		target = {
-			loc = vec3(-194.18, -1335.6, 31.3),
-			length = 0.6,
-			width = 2.0,
-			heading = 0,
-			minZ = 30.5,
-			maxZ = 32.3,
+			loc = vec3(-1642.88, -783.98, 10.18),
+			length = 2.6,
+			width = 0.6,
+			heading = 50,
+			minZ = 9.78,
+			maxZ = 11.38,
 			label = 'Otwórz szafke'
 		},
 		name = 'bennyslocker',
@@ -1563,14 +1563,14 @@ return {
 		groups = {['mechanic'] = 0}
 	},
 	{
-		coords = vec3(-226.64, -1316.3, 31.3),
+		coords = vec3(-1674.09, -783.03, 10.17),
 		target = {
-			loc = vec3(-226.64, -1316.3, 31.3),
-			length = 2.4,
-			width = 0.6,
-			heading = 0,
-			minZ = 30.3,
-			maxZ = 32.1,
+			loc = vec3(-1674.09, -783.03, 10.17),
+			length = 1.0,
+			width = 2.4,
+			heading = 50,
+			minZ = 9.77,
+			maxZ = 11.17,
 			label = 'Otwórz Magazyn'
 		},
 		name = 'bennysmagazyn',
@@ -3576,14 +3576,14 @@ return {
 },
 -- The town Club
 {
-	coords = vec3(-1345.1, -1058.1, 11.6),
+	coords = vec3(-1014.04, -90.57, -99.4),
 	target = {
-		loc = vec3(-1345.1, -1058.1, 11.6),
-		length = 0.3,
-		width = 3.05,
-		heading = 120,
-		minZ = 10.40,
-		maxZ = 12.75,
+		loc = vec3(-1014.04, -90.57, -99.4),
+		length = 0.8,
+		width = 3.8,
+		heading = 0,
+		minZ = -100.4,
+		maxZ = -98.4,
 		label = 'Otwórz szafke'
 	},
 	name = 'townclublocker',
@@ -3594,14 +3594,14 @@ return {
 	groups = {['townclub'] = 0}
 },
 {
-	coords = vec3(-1352.86, -1065.69, 11.48),
+	coords = vec3(-1004.01, -63.85, -99.0),
 	target = {
-		loc = vec3(-1352.86, -1065.69, 11.48),
-		length = 0.20,
-		width = 1.4,
-		heading = 300,
-		minZ = 7.48,
-		maxZ = 11.48,
+		loc = vec3(-1004.01, -63.85, -99.0),
+		length = 4.20,
+		width = 1.0,
+		heading = 330,
+		minZ = -100.0,
+		maxZ = -98.6,
 		label = 'Otwórz Magazyn'
 	},
 	name = 'townclubmagazyn',
@@ -3612,57 +3612,21 @@ return {
 	groups = {['townclub'] = 1}
 },
 {
-	coords = vec3(-1297.5, -1038.2, 14.2),
+	coords = vec3(-1003.65, -78.58, -98.97),
 	target = {
-		loc = vec3(-1297.5, -1038.2, 14.2),
-		length = 0.55,
-		width = 0.60,
-		heading = 120,
-		minZ = 13.95,
-		maxZ = 14.45,
-		label = 'Otwórz Szafke'
-	},
-	name = 'townclubbosmagazyn',
-	label = 'Szafka szefa',
-	owner = false,
-	slots = 100,
-	weight = 100000,
-	groups = {['townclub'] = 6}
-},
-{
-	coords = vec3(-1349.7, -1064.31, 11.47),
-	target = {
-		loc = vec3(-1349.7, -1064.31, 11.47),
-		length = 0.80,
-		width = 2.0,
-		heading = 30,
-		minZ = 7.22,
-		maxZ = 11.62,
-		label = 'Tacka'
+		loc = vec3(-1003.65, -78.58, -98.97),
+		length = 1.80,
+		width = 1.0,
+		heading = 0,
+		minZ = -103.17,
+		maxZ = -99.17,
+		label = 'Stolik'
 	},
 	name = 'townclubtacka',
-	label = 'Tacka',
+	label = 'Stolik',
 	owner = false,
 	slots = 8,
 	weight = 10000,
-},
-{
-	coords = vec3(1111.36, 207.85, -49.44),
-	target = {
-		loc = vec3(1111.36, 207.85, -49.44),
-		length = 0.8,
-		width = 0.60,
-		heading = 25,
-  		minZ = -49.64,
-  		maxZ = -48.64,
-		label = 'Otwórz Lodówkę'
-	},
-	name = 'townclubcasino',
-	label = 'Lodówka',
-	owner = false,
-	slots = 100,
-	weight = 100000,
-	groups = {['townclub'] = 0}
 },
 
 -- Hells Gate Pub
