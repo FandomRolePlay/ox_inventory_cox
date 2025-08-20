@@ -1359,8 +1359,8 @@ return {
 		degrade = 1 * 24 * 60, -- day * hour * minute
 	},
 	['town_mors'] = {
-		label = 'Mors malinowy',
-		description = 'Naturalny napój z malin, lekko kwaśny i orzeźwiający, idealny do cięższych dań. Serwowany na zimno z lodem.',
+		label = 'Mors żurawinowy',
+		description = 'Naturalny napój z żurawiny, lekko kwaśny i orzeźwiający, idealny do cięższych dań. Serwowany na zimno z lodem.',
 		weight = 300,
 		decay = true,
 		client = {
