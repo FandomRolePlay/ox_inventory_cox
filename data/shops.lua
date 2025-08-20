@@ -1770,6 +1770,7 @@ return {
 			['pawnshop'] = 6
 		},
 		inventory = {
+			{ name = 'radio3_box',    price = 500, count = 5 },
 			{ name = 'cruiser2',    price = 100, count = 1 },
 			{ name = 'bmx3',        price = 200, count = 3 },
 			{ name = 'bmxp2',        price = 500, count = 3 },

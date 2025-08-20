@@ -2524,8 +2524,16 @@ return {
 	['radio3'] = {
 		label = 'Radio',
 		weight = 350,
+		degrade = 20080, -- 10080 tydzien, przywrócić pod koniec sierpnia
 		stack = false,
 		description = 'Komercyjne radio z mocną baterią, dalekiego zasięgu'
+	},
+
+	['radio3_box'] = {
+		label = 'Pudełko z nowym radiem',
+		weight = 350,
+		stack = true,
+		description = 'Radio w pudełku'
 	},
 
 	['radio_jammer'] = {
