@@ -3333,6 +3333,77 @@ return {
 		stack = false,
 	},
 
+	-- phone snatcher
+
+	['flipper_hacking'] = {
+       label = 'Lokalizator telefonów',
+       weight = 100,
+       stack = true,
+       close = false,
+       description = 'A hacking device',
+       image = 'flipper_hacking.png'
+   },
+   
+   ['aphone'] = {
+       label = 'iFruit 13',
+       weight = 100,
+       stack = false,
+       close = false,
+       description = 'Zablokowany telefon z wyższej półki',
+       image = 'aphone.png'
+   },
+   
+   ['samsamphone'] = {
+       label = 'bitterSweet Stick&Curve',
+       weight = 100,
+       stack = false,
+       close = false,
+       description = 'Zablokowany telefon z niższej półki',
+       image = 'samsamphone.png'
+   },
+
+   ['phone'] = {
+		label = 'iFruit 8 Classic',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
+	['black_phone'] = {
+		label = 'iFruit 8 Black',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
+	['yellow_phone'] = {
+		label = 'iFruit 8 Yellow',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
+	['red_phone'] = {
+		label = 'iFruit 8 Red',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
+	['green_phone'] = {
+		label = 'iFruit 8 Green',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
+	['white_phone'] = {
+		label = 'iFruit 8 White',
+		description = 'Zablokowany telefon z średniej półki',
+		weight = 150,
+		stack = false,
+	},
+
 	-- documents
 	--[[ ["id_card"] = {
 		label = "Dowód Tożsamości",
@@ -3372,7 +3443,7 @@ return {
 	},
 
 	["phone_dongle"] = {
-		label = "Phone Dongle",
+		label = "Klucz USB",
 		weight = 50,
 		stack = false,
 	},
@@ -3397,108 +3468,6 @@ return {
 				TriggerEvent("lb-phone:itemAdded")
 			end
 		}
-	},
-
-	['phone'] = {
-		label = 'Phone 15 Classic',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
-	},
-
-	['black_phone'] = {
-		label = 'Phone 15 Black',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
-	},
-
-	['yellow_phone'] = {
-		label = 'Phone 15 Yellow',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
-	},
-
-	['red_phone'] = {
-		label = 'Phone 15 Red',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
-	},
-
-	['green_phone'] = {
-		label = 'Phone 15 Green',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
-	},
-
-	['white_phone'] = {
-		label = 'Phone 15 White',
-		weight = 150,
-		stack = false,
-		--[[ consume = 0,
-		client = {
-			export = "qs-smartphone-pro.UsePhoneItem",
-			add = function(total)
-				TriggerServerEvent('phone:itemAdd')
-			end,
-
-			remove = function(total)
-				TriggerServerEvent('phone:itemDelete')
-			end
-		} ]]
 	},
 
 	["phone_box"] = {
