@@ -3283,12 +3283,21 @@ return {
 		consume = 0
 	},
 
-	['evidence-bag'] = {
-		label = 'Torba dowodowa',
-		weight = 100,
+    ["evidence-bag"] = {
+		label = "Torba dowodowa",
+        description = "Plastikowa, plombowana torba kryminalistyczna służąca do zabezpieczania i przechowywania dowodów rzeczowych, takich jak łuski, wyniki testów, narzędzia zbrodni itp.",
+		weight = 50,
 		stack = false,
 		close = false,
-		consume = 0
+		consume = 0,
+        buttons = {
+            {
+                label = "Podpisz",
+                action = function(slot)
+                    TriggerEvent("tenir_evidences:client:sign_evidence_bag", slot)
+                end
+            }
+        }
 	},
 
 	['pizzabox'] = {
@@ -3338,6 +3347,7 @@ return {
 	['flipper_hacking'] = {
        label = 'Lokalizator telefonów',
        weight = 100,
+	   degrade = 10080, -- 10080 tydzien
        stack = true,
        close = false,
        description = 'A hacking device',
@@ -11215,7 +11225,7 @@ return {
 	--lation_chopshop
 	['auto_parts'] = {
     	label = 'Części samochodowe',
-    	weight = 400,
+    	weight = 230,
 	},
 	['parts_set'] = {
     	label = 'Zestaw części samochodowych',
@@ -11392,18 +11402,156 @@ return {
 			export = 'bcso_evidence.photo',
 		},
 	},
+
+	-- TENIR_EVIDENCES
 	
-	['criminal_kit'] = {
-		label = 'Criminal kit',
-		weight = 850,
+    ["criminal_kit"] = {
+		label = "Zestaw Kryminalistyczny",
+        description = "Specjalistyczny zestaw do zabezpieczania śladów kryminalistycznych: odciski palców, próbki DNA, ślady biologiczne i prochowe. Umożliwia także opisywanie i katalogowanie dowodów, takich jak łuski czy inne ślady.",
+		weight = 1200,
 		stack = false,
 	},
 	
-	['gsr_kit'] = {
-		label = 'GSR Test kit',
-		weight = 350,
+    ["gsr_kit"] = {
+		label = "Zestaw Testu GSR",
+        description = "Zestaw do przeprowadzania testu na obecność śladów prochu strzelniczego. Umożliwia pobranie próbek z rąk, ubrania lub przedmiotów w celu dalszej analizy kryminalistycznej.",
+		weight = 150,
+		stack = true,
+	},
+	["gsr_result"] = {
+		label = "Wyniki Testu GSR",
+		weight = 75,
 		stack = false,
 	},
+
+	['afid_confetti'] = {
+		label = "Konfetti z AFID",
+        description = "Konfetti z Anti-Felon Identification",
+		weight = 1,
+		stack = false,
+        client = {
+			image = 'afid_confetti.png'
+		}
+	},
+    ['husk_9'] = {
+		label = "Łuska 9×19 mm Parabellum",
+        description = "Łuska naboju 9×19 mm Parabellum.",
+		weight = 4,
+		stack = false,
+        client = {
+			image = 'husk_9.png'
+		}
+	},
+    ['husk_22'] = {
+		label = "Łuska .22 Long Rifle",
+        description = "Łuska naboju .22 Long Rifle.",
+		weight = 1,
+		stack = false,
+        client = {
+			image = 'husk_22.png'
+		}
+	},
+    ['husk_38'] = {
+		label = "Łuska .38 Long Colt",
+        description = "Łuska naboju .38 Long Colt",
+		weight = 6,
+		stack = false,
+        client = {
+			image = 'husk_38.png'
+		}
+	},
+    ['husk_44'] = {
+		label = "Łuska .44 Magnum",
+        description = "Łuska naboju .44 Magnum",
+		weight = 7,
+		stack = false,
+        client = {
+			image = 'husk_44.png'
+		}
+	},
+    ['husk_45'] = {
+		label = "Łuska .45 Automatic Colt Pistol",
+        description = "Łuska naboju .45 Automatic Colt Pistol",
+		weight = 7,
+		stack = false,
+        client = {
+			image = 'husk_45.png'
+		}
+	},
+    ['husk_50'] = {
+		label = "Łuska .50 Action Express",
+        description = "Łuska naboju .50 Action Express",
+		weight = 9,
+		stack = false,
+        client = {
+			image = 'husk_50.png'
+		}
+	},
+    ['husk_12'] = {
+		label = "Łuska Gauge 12 Buckshot",
+        description = "Łuska naboju Gauge 12 Buckshot",
+		weight = 6,
+		stack = false,
+        client = {
+			image = 'husk_12.png'
+		}
+	},
+    ['husk_bb'] = {
+		label = "Łuska Gauge 12 Bean bag",
+        description = "Łuska naboju Gauge 12 Bean bag",
+		weight = 6,
+		stack = false,
+        client = {
+			image = 'husk_bb.png'
+		}
+	},
+    ['husk_556'] = {
+		label = "Łuska 5,56 × 45 mm NATO",
+        description = "Łuska naboju 5,56 × 45 mm NATO",
+		weight = 5,
+		stack = false,
+        client = {
+			image = 'husk_556.png'
+		}
+	},
+    ['husk_762x39'] = {
+		label = "Łuska 7,62 × 39 mm",
+        description = "Łuska naboju 7,62 × 39 mm",
+		weight = 8,
+		stack = false,
+        client = {
+			image = 'husk_762x39.png'
+		}
+	},
+    ['husk_762x51'] = {
+		label = "Łuska 7.62 × 51 mm NATO",
+        description = "Łuska naboju 7.62 × 51 mm NATO",
+		weight = 10,
+		stack = false,
+        client = {
+			image = 'husk_762x51.png'
+		}
+	},
+    ['husk_50bmg'] = {
+		label = "Łuska .50 Browning Machine Gun",
+        description = "Łuska naboju .50 Browning Machine Gun",
+		weight = 120,
+		stack = false,
+        client = {
+			image = 'husk_50bmg.png'
+		}
+	},
+    ['husk_300'] = {
+		label = "Łuska .300 Savage",
+        description = "Łuska naboju .300 Savage",
+		weight = 9,
+		stack = false,
+        client = {
+			image = 'husk_300.png'
+		}
+	},
+
+	-- EOF TENIR_EVIDENCES
 	
 	['evidence'] = {
 		label = 'Materiał dowodowy',
