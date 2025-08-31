@@ -114,7 +114,7 @@ return {
 			[`bison`] = {50, 150000},
 			[`nsandstorm`] = {50, 300000},
 			[`nsandstorm2`] = {600, 400000},
-			[`hellenstorm`] = {50, 300000},
+			[`hellenstorm`] = {100, 400000},
 			[`sadler`] = {60, 200000},
 			[`bobcatxl`] = {60, 200000},
 			[`surfer`] = {60, 100000},
