@@ -159,7 +159,7 @@ setContainerProperties('drugstash1', {
 })
 setContainerProperties('kawalektort', {
     slots = 10,
-    maxWeight = 1100,
+    maxWeight = 5000,
     whitelist = {'ss_cake','ss_red_velvet','cake,','blueberry_pie','kendalcake','town_medovik'}
 })
 
