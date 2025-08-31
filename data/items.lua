@@ -10449,8 +10449,8 @@ return {
 	},
 
 	['ammocrate'] = {
-		label = 'Skrzynia z amunicją',
-		description = "Skrzynia dedykowana do przechowywania amunicji",
+		label = 'Skrzynia',
+		description = "Skrzynia dedykowana do przechowywania części broni",
 		weight = 1000,
 		stack = false,
 	},
