@@ -113,6 +113,7 @@ return {
 			[`minivan2`] = {30, 60000},
 			[`bison`] = {50, 150000},
 			[`nsandstorm`] = {50, 300000},
+			[`dubsta3`] = {50, 300000},
 			[`nsandstorm2`] = {600, 400000},
 			[`hellenstorm`] = {100, 400000},
 			[`sadler`] = {60, 200000},
